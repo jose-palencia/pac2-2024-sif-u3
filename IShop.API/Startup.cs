@@ -76,10 +76,11 @@ namespace IShop.API
             services.AddCors(opt =>
             {
                 opt.AddPolicy("CorsPolicy", builder => builder
-                    .WithOrigins(Configuration["FrontendUrlTesting"]!, Configuration["FrontendUrlProduction"]!, "http://localhost:5173")
+                    // .WithOrigins(Configuration["FrontendUrlTesting"]!, Configuration["FrontendUrlProduction"]!, "http://localhost:5173")
+                    .AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
+                    .AllowAnyHeader());
+                    // .AllowCredentials());
             });
         }
 

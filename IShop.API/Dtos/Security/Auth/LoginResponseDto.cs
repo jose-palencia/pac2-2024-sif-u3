@@ -8,6 +8,5 @@ namespace IShop.API.Dtos.Security.Auth
         public string? RefreshToken { get; set; }
         public DateTime TokenExpiration { get; set; }
         public List<string>? Roles { get; set; }
-        public decimal ExchangeRate { get; set; }
     }
 }

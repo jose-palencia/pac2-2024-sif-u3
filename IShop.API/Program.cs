@@ -1,33 +1,35 @@
+using IShop.API;
 using IShop.API.Database;
+using IShop.API.Database.Entities.Security;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var startup = new Startup(builder.Configuration);
 
-builder.Services.AddDbContext<IShopDbContext>(options => {
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-builder.Services.AddAuthorization();
-
-builder.Services.AddIdentityApiEndpoints<IdentityUser>()
-    .AddEntityFrameworkStores<IShopDbContext>();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 
-app.MapGroup("/api").MapCustomIdentityApi<IdentityUser>();
+startup.Configure(app, app.Environment);
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var service = scope.ServiceProvider;
+    var loggerFactory = service.GetRequiredService<ILoggerFactory>();
+
+    try
+    {
+        var userManager = service.GetRequiredService<UserManager<UserEntity>>();
+        var roleManager = service.GetRequiredService<RoleManager<RoleEntity>>();
+        var dbContext = service.GetRequiredService<IShopDbContext>();
+
+        //await IShopDbSeeder.LoadDataAsync(userManager, roleManager, loggerFactory, dbContext);
+    }
+    catch (Exception e)
+    {
+        //loggingService.LogError(nameof(Program), e, "Error al inicializar datos con Seed.");
+    }
 }
 
 app.Run();

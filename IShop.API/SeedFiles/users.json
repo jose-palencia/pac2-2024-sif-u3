@@ -1,0 +1,13 @@
+[
+    {
+        "email" : "jperez@me.com",
+        "firstName": "Juan",
+        "lastName": "Perez",
+        "gender": "M",
+        "jobTitle": "Administrador",
+        "userName" : "jperez@me.com",
+        "twoFactorEnabled" : false,
+        "emailConfirmed" : true,
+        "status" : 1
+    }
+]

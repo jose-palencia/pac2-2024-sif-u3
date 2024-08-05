@@ -1,4 +1,5 @@
 using IShop.API.Database.Entities.Security;
+using IShop.API.Database.Entities.Store;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -49,5 +50,9 @@ namespace IShop.API.Database
                 }
             }
         }
+    
+        public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<ProductImageEntity> ProductsImages { get; set; }
+
     }
 }

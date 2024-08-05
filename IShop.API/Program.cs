@@ -24,11 +24,12 @@ using (var scope = app.Services.CreateScope())
         var roleManager = service.GetRequiredService<RoleManager<RoleEntity>>();
         var dbContext = service.GetRequiredService<IShopDbContext>();
 
-        //await IShopDbSeeder.LoadDataAsync(userManager, roleManager, loggerFactory, dbContext);
+        await IShopDbSeeder.LoadDataAsync(userManager, roleManager, loggerFactory, dbContext);
     }
     catch (Exception e)
     {
-        //loggingService.LogError(nameof(Program), e, "Error al inicializar datos con Seed.");
+        var logger = loggerFactory.CreateLogger<IShopDbSeeder>();
+        logger.LogError(e, "Error al inicializar datos con Seed.");
     }
 }
 

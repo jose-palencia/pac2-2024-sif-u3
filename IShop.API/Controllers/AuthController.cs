@@ -63,5 +63,16 @@ namespace IShop.API.Controllers
             });
         }
 
+        [HttpGet("auth-status")]
+        [Authorize]
+        public ActionResult<ResponseDto<LoginResponseDto>> AuthStatus()
+        {
+            return StatusCode(200, new
+            {
+                Status = true,
+                Message = "Sesión activa",
+            });
+        }
+
     }
 }

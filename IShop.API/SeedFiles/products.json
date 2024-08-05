@@ -1,0 +1,86 @@
+[
+    {
+      "id": "0F9EC056-41BC-4FE6-A1D7-902E4958D296",
+      "Title": "Baleadas",
+      "Price": 25.00,
+      "Description": "La baleada es uno de los platos típicos más tradicionales y representativos de la gastronomía hondureña, originada en el norte de Honduras a mediados del siglo XX. Se desconoce el origen demográfico exacto y de su nombre. ",
+      "Stock": 1000
+    },
+    {
+      "id": "21466824-ED6A-41CA-814E-BC65A6E89339",
+      "Title": "Café Copan",
+      "Price": 136.00,
+      "Description": "Delicioso café cultivado en las tierras de Santa Rosa de Copán en 4 diferentes sabores para deleitar su palada",
+      "Stock": 5000
+    },
+    {
+      "id": "2B81AF5C-FE55-44F2-BBA3-EB8F68966BCE",
+      "Title": "Copan Dry",
+      "Price": 18.00,
+      "Description": "El Copán Dry es una bebida carbonatada con variedad de sabores, fabricada en dos presentaciones: su tradicional botella de vidrio de 7 oz. y en envase desechable de 500 ml. Es la marca líder de Copán Industrial, la cual inició como tal en 1965, para darle un nombre insigne al refresco que desde 1945 se comenzó a fabricar",
+      "Stock": 100000
+    },
+    {
+      "id": "9E458E2F-FB6D-4C03-A286-280067B83E0A",
+      "Title": "Leche Leyde",
+      "Price": 25.00,
+      "Description": "Leche Leyde Entera Pasteurizada ",
+      "Stock": 500
+    },
+    {
+      "id": "7AEFCA07-A39C-4B5A-8666-1AD4193F90E5",
+      "Title": "Leche Sula",
+      "Price": 26.00,
+      "Description": "Leche Entera Pasteurizada ",
+      "Stock": 5000
+    },
+    {
+      "id": "0B9B5E5D-DB5D-40F1-88EF-4A0210509EAB",
+      "Title": "Puro",
+      "Price": 200.00,
+      "Description": "Los puros de Santa Rosa tienen calidad, cuerpo templado y un sabor suave reconocidos en los mercados de Europa y Estados Unidos.",
+      "Stock": 5000
+    },
+    {
+      "id": "69430F10-F96E-4067-A5D9-73F29540F718",
+      "Title": "Semitas",
+      "Price": 30.00,
+      "Description": "Este pan era muy consumido por las personas de escasos recursos en la época colonial, el cual se preparaba de diferentes formas en cada país.",
+      "Stock": 100
+    },
+    {
+      "id": "316C33CC-0FA8-44C9-AA5F-607D2B3AEFAE",
+      "Title": "Ticuco",
+      "Price": 10.00,
+      "Description": null,
+      "Stock": 700
+    },
+    {
+      "id": "B5EA103D-3F1C-47E5-8A62-0EED67F88C64",
+      "Title": "Timoshenko",
+      "Price": 400.00,
+      "Description": null,
+      "Stock": 900
+    },
+    {
+      "id": "87744F74-9CFE-4640-90AC-D38A0BF763CD",
+      "Title": "Churro Zambos",
+      "Price": 10.00,
+      "Description": null,
+      "Stock": 1100
+    },
+    {
+      "id": "5E037A2D-E85B-46B4-9319-48F2EB50CFE4",
+      "Title": "Tamal",
+      "Price": 22.00,
+      "Description": null,
+      "Stock": 210
+    },
+    {
+      "id": "583A0AFE-7B59-4458-B095-C62FAA8FF59D",
+      "Title": "Rosquillas Olanchanas",
+      "Price": 2.00,
+      "Description": null,
+      "Stock": 1000
+    }
+  ]

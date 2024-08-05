@@ -1,3 +1,4 @@
+using IShop.API.Helpers;
 using IShop.API.Services.Interfaces;
 using IShop.API.Services.Security;
 
@@ -10,9 +11,13 @@ namespace IShop.API.Configuration
 
             //services.AddAutoMapper(typeof(AutoMapperProfiles));
             services.AddHttpContextAccessor();
-            
+
             services.AddTransient<IAuthService, AuthService>();
-            
+            services.AddTransient<IProductsService, ProductsService>();
+            services.AddTransient<IImagesService, ImagesService>();
+
+            services.AddAutoMapper(typeof(AutoMapperProfiles));
+
         }
     }
 }
